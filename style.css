@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  max-width: 100vw;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 5rem 1fr 5rem;
+  background: #ada996; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/*header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  padding: 1rem;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #eee;
+}
+header .login-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
+.login-btn a:hover {
+  color: #41c30a;
+}
+
+/************************************************************************/
+/***footer */
+
+footer {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #eee;
+}
+/*************************************************/
+/* style main */
+
+main {
+  margin: 3rem;
+  font-size: 2rem;
+}
+.add-todo {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  color: #666666;
+}
+.add-todo .btn {
+  color: #41c30a;
+  cursor: pointer;
+}
+.add-todo .btn:hover {
+  color: #3bad0a;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  justify-content: flex-start;
+}
+
+/****************************/
+/* todo list */
+section {
+  margin: 2rem;
+}
+.container .todo-list {
+  max-width: 270px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 5px -6px rgb(122, 172, 172);
+  padding: 2.5rem;
+  margin-top: 1rem;
+  max-height: 100%;
+  background: #d3cce3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.todo-list .list-header {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-list .list-header .delete-list-icon:hover {
+  color: #b80505;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+/* style input container for todo list */
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.input-container .todo-input {
+  border-radius: 15px;
+  outline: none;
+  padding: 0.2rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #706666;
+}
+.input-container .new-todo-icon {
+  color: #41c30a;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.input-container .new-todo-icon:hover {
+  color: #3bad0a;
+}
+/***********************************************************************/
+
+/* todo list items */
+.container .todo-list ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  line-height: 1.5;
+}
+
+.container .todo-list ul li div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.container .todo-list ul li .delete-icon {
+  color: #e70c0c;
+  cursor: pointer;
+  align-self: center;
+}
+.container .todo-list ul li .check-todo {
+  align-self: center;
+}
+.container .todo-list ul li .delete-icon:hover {
+  color: #bb0b0b;
+}
+span {
+  max-width: 120px;
+}
+/*************************************************************/
+/**** class Lists **************/
+
+.todo-checked {
+  text-decoration: line-through;
+}
